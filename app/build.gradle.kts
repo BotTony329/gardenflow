@@ -29,7 +29,7 @@ android {
 
         buildConfigField("String", "RELEASE_CERT_SHA256", "\"${localProps.getProperty("RELEASE_CERT_SHA256", "")}\"")
         buildConfigField("Boolean", "ENABLE_PLAY_INTEGRITY", localProps.getProperty("ENABLE_PLAY_INTEGRITY", "false"))
-        buildConfigField("String", "PRIVACY_POLICY_URL", "\"${localProps.getProperty("PRIVACY_POLICY_URL", "")}\"")
+        buildConfigField("String", "PRIVACY_POLICY_URL", "\"${localProps.getProperty("PRIVACY_POLICY_URL", "https://bottony329.github.io/gardenflow/")}\"")
     }
 
     signingConfigs {

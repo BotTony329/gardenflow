@@ -1,7 +1,7 @@
 DEEPSEEK_API_URL=
 DEEPSEEK_API_KEY=
 DEEPSEEK_MODEL=
-PRIVACY_POLICY_URL=
+PRIVACY_POLICY_URL=https://bottony329.github.io/gardenflow/
 # If your API endpoint is an OpenAI-compatible gateway, use a lightweight Flash model here.
 # If you use the official DeepSeek endpoint, use a supported DeepSeek model name instead.
 RELEASE_CERT_SHA256=
