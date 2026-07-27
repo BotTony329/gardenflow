@@ -12,8 +12,8 @@ This folder is designed to be published as a static GitHub Pages site.
 
 Before using this page in Google Play Console, replace:
 
-- `[INSERT MY DEVELOPER NAME]`
-- `[INSERT MY SUPPORT EMAIL]`
+- `Tony Zhao`
+- `tonyzhao32965@gmail.com`
 
 Then publish the folder with GitHub Pages and configure the Android build with:
 
