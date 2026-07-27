@@ -1,0 +1,16 @@
+.gradle/
+.kotlin/
+build/
+app/build/
+work/
+tmp/
+outputs/
+local.properties
+keystore.properties
+*.jks
+*.keystore
+*.apk
+*.aab
+.DS_Store
+.idea/
+*.iml

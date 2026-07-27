@@ -1,0 +1,111 @@
+:root {
+  color-scheme: light;
+  --background: #f8f4ec;
+  --surface: #ffffff;
+  --text: #22211f;
+  --muted: #6d6962;
+  --brand: #4f9361;
+  --brand-soft: #e6f1e7;
+  --line: #e2ddd4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+.page {
+  width: min(920px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+.hero,
+section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: clamp(24px, 5vw, 48px);
+  box-shadow: 0 16px 48px rgba(42, 34, 21, 0.06);
+}
+
+.hero {
+  background: linear-gradient(180deg, var(--brand-soft), var(--surface));
+}
+
+section {
+  margin-top: 18px;
+}
+
+.eyebrow {
+  color: var(--brand);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 0 0 14px;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: clamp(24px, 4vw, 34px);
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+p:last-child,
+li:last-child {
+  margin-bottom: 0;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 1.12rem;
+  max-width: 68ch;
+}
+
+.meta {
+  color: var(--muted);
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: var(--brand);
+}
+
+@media (max-width: 560px) {
+  .page {
+    width: min(100% - 20px, 920px);
+    padding-top: 20px;
+  }
+
+  .hero,
+  section {
+    border-radius: 22px;
+  }
+}

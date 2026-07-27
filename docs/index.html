@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GardenFlow Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for GardenFlow, a personal weather-aware gardening reminder app.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">GardenFlow</p>
+      <h1>Privacy Policy</h1>
+      <p class="lede">GardenFlow is a local-first gardening reminder app. This policy explains what data the app stores on your device and what data may be sent to third-party services when you use weather, plant research, OCR, AI, location, camera, photo, and notification features.</p>
+      <p class="meta"><strong>Effective date:</strong> 27 July 2026</p>
+      <p class="meta"><strong>Developer:</strong> [INSERT MY DEVELOPER NAME]</p>
+      <p class="meta"><strong>Support contact:</strong> [INSERT MY SUPPORT EMAIL]</p>
+    </header>
+
+    <section>
+      <h2>1. Overview</h2>
+      <p>GardenFlow helps you track plants, watering, fertilising, growth stages, weather-aware reminders, and growth photos. The app does not require an account, login, subscription, advertising profile, or cloud database. Your garden data is designed to stay on your device unless you choose a feature that needs an external service.</p>
+    </section>
+
+    <section>
+      <h2>2. Data GardenFlow Stores Locally</h2>
+      <p>GardenFlow stores the following information in a local Room database on your device:</p>
+      <ul>
+        <li>Plant names, varieties, selected icon names, planting status, sowing dates, watering and fertilising intervals, preferred temperature ranges, rain skip thresholds, harvest estimates, AI-generated care guidance, and growth stage timelines.</li>
+        <li>Care history, including watering, fertilising, skipped tasks, and related timestamps.</li>
+        <li>Garden tasks, reminder status, snoozed task times, and notification preferences.</li>
+        <li>Garden location settings, including latitude, longitude, and saved location label when you configure weather features.</li>
+        <li>Photo URI references for seed packet images and plant growth photos.</li>
+        <li>OCR text extracted from seed packet images when you save it with a plant.</li>
+        <li>App settings such as selected language and reminder check time.</li>
+      </ul>
+      <p>GardenFlow does not intentionally upload this local database to a GardenFlow server. Android backup and device-transfer extraction are disabled for the app database, files, and shared preferences in this build.</p>
+    </section>
+
+    <section>
+      <h2>3. Camera, Photos, And OCR</h2>
+      <p>GardenFlow asks for camera access only when you choose to take a seed packet or plant growth photo. You can also choose existing photos from your device. The app stores photo URI references so it can display selected photos later. Images taken through the in-app camera are created through Android's FileProvider in app cache storage.</p>
+      <p>Deleting a photo entry or deleting a plant removes GardenFlow's local database reference. If the original image is stored in your gallery, document provider, or another app, GardenFlow may not delete that original file from the other provider.</p>
+      <p>Seed packet OCR uses Google ML Kit Text Recognition in the app. Extracted OCR text can be reviewed and edited before it is used to generate a care plan. If you generate an AI care plan, the OCR text may be sent to the configured AI provider as described below.</p>
+    </section>
+
+    <section>
+      <h2>4. Location And Weather</h2>
+      <p>GardenFlow can use your device's approximate or precise location to set a garden location for weather-aware reminders. Location permission is requested only when you choose to use phone location. The app does not request Android background location permission.</p>
+      <p>You may also type a city or suburb, search for matching places, or manually enter latitude and longitude. Place search and weather forecasts use Open-Meteo services. GardenFlow sends the location query or coordinates needed to return location candidates and weather data, including current temperature, rain, precipitation probability, humidity, and daily forecast values.</p>
+    </section>
+
+    <section>
+      <h2>5. AI Care Plans And Plant Research</h2>
+      <p>When AI is configured and you choose to generate or regenerate a care plan, GardenFlow sends relevant plant information to the configured DeepSeek-compatible AI endpoint. This may include plant name, edited seed packet or OCR text, sowing date, and the plant start state selected in the questionnaire. The AI provider returns a structured care plan used to create local plant rules and reminders.</p>
+      <p>GardenFlow also uses a plant research service based on Wikipedia/Wikimedia endpoints to search for a plant name and retrieve a short plant summary that can improve care plan generation. The query sent to Wikipedia/Wikimedia is the plant name or text you enter for plant research.</p>
+      <p>The production release build currently leaves AI endpoint, model, and API key blank unless you configure a production AI delivery strategy. If AI is not configured or a network request fails, GardenFlow creates an offline starter plan on the device.</p>
+    </section>
+
+    <section>
+      <h2>6. Notifications And Background Work</h2>
+      <p>GardenFlow uses Android notifications and WorkManager to check for due watering or fertilising tasks. Notifications may show plant names, task types, task counts, and reminder reasons. Background checks use locally stored plant rules and may refresh weather if a garden location is configured. The app does not use an always-running background service.</p>
+    </section>
+
+    <section>
+      <h2>7. Third-Party Services And SDKs</h2>
+      <p>GardenFlow uses third-party services and SDKs to provide core features:</p>
+      <ul>
+        <li>Open-Meteo for geocoding and weather forecasts.</li>
+        <li>A configured DeepSeek-compatible AI provider for plant care plan generation, if enabled.</li>
+        <li>Wikipedia/Wikimedia public APIs for plant research summaries.</li>
+        <li>Google ML Kit Text Recognition for OCR.</li>
+        <li>Google Play services location for phone location.</li>
+        <li>Google Play Integrity for app integrity checks.</li>
+        <li>Android Jetpack libraries, including Room, WorkManager, Compose, Hilt, CameraX, and Navigation.</li>
+      </ul>
+      <p>These services may receive technical network metadata such as IP address, device/network information, and request timestamps according to their own privacy practices.</p>
+    </section>
+
+    <section>
+      <h2>8. What GardenFlow Does Not Do</h2>
+      <ul>
+        <li>No account registration or login.</li>
+        <li>No advertising SDK.</li>
+        <li>No advertising ID collection found in the current codebase.</li>
+        <li>No analytics SDK or crash reporting SDK found in the current codebase.</li>
+        <li>No contact, calendar, microphone, SMS, call log, or payment data collection.</li>
+        <li>No sale of personal or sensitive user data.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>9. Data Retention And Deletion</h2>
+      <p>Plant records, settings, care history, tasks, OCR text, and photo references remain on your device until you delete them, clear app data, or uninstall the app. You can delete individual plants in the app. Clearing GardenFlow's app data from Android settings removes the local database and settings stored by GardenFlow.</p>
+      <p>Because GardenFlow can reference photos owned by the Android gallery or another document provider, deleting a GardenFlow record may not delete the original image from that provider.</p>
+    </section>
+
+    <section>
+      <h2>10. Security</h2>
+      <p>GardenFlow requires HTTPS for network requests and disables cleartext traffic in the Android network security configuration. API keys should not be committed to source control. The release build is configured to avoid shipping the local DeepSeek API key directly. Local data is stored in the app's private storage area, but it is not currently encrypted with a separate app-level encryption key.</p>
+    </section>
+
+    <section>
+      <h2>11. Children</h2>
+      <p>GardenFlow is not designed for children and is not intended to be directed to children under 13 or the minimum age required by local law.</p>
+    </section>
+
+    <section>
+      <h2>12. Changes To This Policy</h2>
+      <p>This policy may be updated when GardenFlow changes its features, data handling, or third-party services. The effective date at the top of this page will be updated when changes are made.</p>
+    </section>
+
+    <section>
+      <h2>13. Contact</h2>
+      <p>If you have privacy questions or deletion requests, contact: <strong>[INSERT MY SUPPORT EMAIL]</strong>.</p>
+    </section>
+  </main>
+</body>
+</html>
