@@ -58,7 +58,7 @@ android {
             buildConfigField("String", "DEEPSEEK_API_URL", "\"\"")
             buildConfigField("String", "DEEPSEEK_API_KEY", "\"\"")
             buildConfigField("String", "DEEPSEEK_MODEL", "\"\"")
-            signingConfig = if (releaseSigningFile.exists()) signingConfigs.getByName("releaseConfig") else signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("releaseConfig")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
